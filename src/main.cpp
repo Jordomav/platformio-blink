@@ -1,23 +1,20 @@
 #include <Arduino.h>
 #include <blink.h>
+//int incomingByte;
 
-// int pinLed = 13
-int incomingByte;
+int pinLed = 13;
 
 void setup () {
 
     pinMode(pinLed, OUTPUT);
-    Serial.begin(9600);
-    Serial.println('Logging to Serial');
 }
 
 void loop () {
-    
+
     blink();
 
-    if (Serial.available() > 0) {
-    incomingByte = Serial.read();
-    Serial.print("! ");
-    Serial.write(incomingByte);
-  }
+//    digitalWrite(pinLed, HIGH);
+//    delay(1000);
+//    digitalWrite(pinLed, LOW);
+//    delay(1000);
 }
